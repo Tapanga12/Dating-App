@@ -1,0 +1,84 @@
+
+<!-- Can sign up and log in! -->
+
+{% extends "base.html" %}
+
+{% block title %}Create or Log In{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1 style="text-align: center;">Create Your Player or Log In</h1>
+
+    <!-- Sign-Up Form -->
+    <div>
+        <h2 style="text-align: center;">Sign Up</h2>
+        <form method="POST" enctype="multipart/form-data"> <!-- make sure this is right -->
+            <div>
+                <label for="username">Player Name:</label><br>
+                <input name="username" required>
+            </div>
+            <div>
+                <label for="role">Choose Your Class:</label><br>
+                <select id="role" name="role" required>
+                    <option value="">Select your class</option>
+                    <option value="knight">Knight</option>
+                    <option value="assassin">Assassin</option>
+                    <option value="necromancer">Necromancer</option>
+                    <option value="pirate">Pirate</option>
+                    <option value="samurai">Samurai</option>
+                </select>
+            </div>
+            <div>
+                <label for="gender">Avatar Type:</label><br>
+                <select id="gender" name="gender" required>
+                    <option value="">Choose your avatar</option>
+                    <option value="male">Hero</option>
+                    <option value="female">Heroine</option>
+                </select>
+            </div>
+            <div>
+                <label for="description">Player Bio:</label><br>
+                <textarea id="description" name="description" placeholder="Tell us about your character..."></textarea>
+            </div>
+            <div>
+                <label for="email">Contact Email:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Set Your Password:</label><br>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit">Start Quest</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- separates the two forms, ChatGpt used to help make little hearts for this, I chose the colors -->
+    <div style="text-align: center; margin: 30px 0;">
+        <span style="color: pink; font-size: 20px;">&#10084; &#10084; &#10084; &#10084; &#10084;</span>
+        <span style="color: rgb(238, 116, 136); font-size: 20px;">&#10084; &#10084; &#10084; &#10084; &#10084;</span>
+        <span style="color: rgb(238, 85, 111); font-size: 20px;">&#10084; &#10084; &#10084; &#10084; &#10084;</span>
+        <span style="color: rgb(240, 70, 99); font-size: 20px;">&#10084; &#10084; &#10084; &#10084; &#10084;</span>
+        <span style="color: rgb(244, 20, 58); font-size: 20px;">&#10084; &#10084; &#10084; &#10084; &#10084;</span>
+    </div>
+
+    <!-- Login Form -->
+    <div>
+        <h2 style="text-align: center;">Log In</h2>
+        <form method="POST" action="/login"> <!-- make sure its right -->
+            <div>
+                <label for="login-email">Email:</label><br>
+                <input type="email" id="login-email" name="email" required>
+            </div>
+            <div>
+                <label for="login-password">Password:</label><br>
+                <input type="password" id="login-password" name="password" required>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit">Quest</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
