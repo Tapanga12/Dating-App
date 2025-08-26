@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Profile{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h1 style="text-align: center;">Edit Your Player Profile</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="name">Player Name:</label><br>
+            <input type="text" id="name" name="name" value="" required>
+        </div>
+        <div>
+            <label for="email">Contact Email:</label><br>
+            <input type="email" id="email" name="email" value="" required>
+        </div>
+        <div>
+            <label for="gender">Avatar Type:</label><br>
+            <select id="gender" name="gender" required>
+                <option value="male">Hero</option>
+                <option value="female">Heroine</option>
+            </select>
+        </div>
+        <div>
+            <label for="role">Choose Your Class:</label><br>
+            <select id="role" name="role" required>
+                <option value="knight">Knight</option>
+                <option value="assassin">Assassin</option>
+                <option value="necromancer">Necromancer</option>
+                <option value="pirate">Pirate</option>
+                <option value="samurai">Samurai</option>
+            </select>
+        </div>
+        <div>
+            <label for="description">Player Bio:</label><br>
+            <textarea id="description" name="description" placeholder="Update your character's story..."></textarea>
+        </div>
+        <div>
+            <label for="photo">Profile Photo:</label><br>
+            <img src="" alt="Profile Photo" class="profile-photo" style="display: block; margin-bottom: 10px;">
+            <input type="file" id="photo" name="photo" accept="image/*">
+        </div>
+        <div style="text-align: center;">
+            <button type="submit">Save your Quest</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
