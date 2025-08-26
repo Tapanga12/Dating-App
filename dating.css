@@ -1,0 +1,108 @@
+body {
+    font-family: comic-sans MS; /*I want the font to be comic-sans, make sure implemented correctly */
+}
+
+.register {
+    background-color:black;
+    font-family: comic-sans MS;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    header h2 {
+        font-family: comic sans MS;
+        color: pink;
+        text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
+        }
+    
+}
+  
+
+/* Hover Effect 
+.btn:hover {
+
+*/
+
+/* 
+
+use of AI: looked up how to a glowing effect online and used AI to help make it less glowing and no animation.
+
+*/
+
+
+/* General Styles */
+
+
+header, footer {
+    font-family: comic-sans MS;
+    color: pink;
+    text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
+    text-align: center;
+}
+
+h1 {
+    color: pink;
+    text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
+}
+
+
+
+
+form button {
+    font-family: comic-sans MS;
+    color: pink;
+    text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 
+form button:hover {
+}
+
+*/
+
+
+/* links hover so it underlines */
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* theme implementation */
+
+
+body.light {
+    --bg-start: white; /* white bg */
+    --bg-end: rgb(101, 24, 201); /* purpley for animation */
+    --text-color: black; /* White text*/
+}
+body.dark {
+    --bg-start: black; /* black bg*/
+    --bg-end: blue; /* blue for animation */
+    --text-color: white; /* White text*/
+}
+body.green {
+    --bg-start: #e8f5e9; /* Light green bg */
+    --bg-end: yellow; /* Yellow for animation */
+    --text-color: #1b5e20; /* Dark green text*/
+}
+
+
+/* The animation to change the background when someone gets a match*/
+/* Keyframes for match animation */
+@keyframes match {
+    from {background-color: var(--bg-start);}
+    to {background-color: var(--bg-end);}
+}
+
+/* Notification Animation -need to implement elsewhereaswell */
+.match-visible {
+    animation: match 1s ease-in-out infinite alternate;
+}
+
+
+/*
+.myclass=All the elements belonging to class myclass.
+*/
