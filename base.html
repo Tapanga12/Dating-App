@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Dating App{% endblock %}</title> <!-- HTML Placeholder -->
+    <title>{% block title %}Dating App{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Dating.css') }}">
 </head>
-<body>
+<body class="light"> <!-- default theme -->
     <header>
         <h1>Dating Life</h1>
     </header>
     <main>
-        {% block content %} <!-- HTML Placeholder -->
+        {% block content %}
         {% endblock %}
     </main>
     <footer>
-        <p>2024 My Dating Life.</p>
+        <p>&copy; 2024 My Dating Life</p>
     </footer>
 </body>
 </html>
-
