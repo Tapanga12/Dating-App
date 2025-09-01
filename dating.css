@@ -90,3 +90,53 @@ body.green {
 .match-visible {
     animation: match 1s ease-in-out infinite alternate;
 }
+
+.form-container {
+    background-color: black;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 12px;
+    width: 60%;
+    max-width: 600px;
+    color: pink;
+    box-shadow: 0 0 20px rgba(230, 0, 115, 0.5);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-form .form-group {
+    margin-bottom: 15px;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.profile-form input,
+.profile-form select,
+.profile-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid pink;
+    border-radius: 6px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: #111;
+    color: pink;
+}
+
+.profile-photo {
+    display: block;
+    margin: 10px 0;
+    max-width: 150px;
+    border-radius: 8px;
+}
+
+.form-actions {
+    text-align: center;
+    margin-top: 20px;
+}
