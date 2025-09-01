@@ -1,108 +1,92 @@
+/* === Global Styles === */
 body {
-    font-family: comic-sans MS; /*I want the font to be comic-sans, make sure implemented correctly */
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-start);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
-
-.register {
-    background-color:black;
-    font-family: comic-sans MS;
-    width: 50%;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    header h2 {
-        font-family: comic sans MS;
-        color: pink;
-        text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
-        }
-    
-}
-  
-
-/* Hover Effect 
-.btn:hover {
-
-*/
-
-/* 
-
-use of AI: looked up how to a glowing effect online and used AI to help make it less glowing and no animation.
-
-*/
-
-
-/* General Styles */
-
 
 header, footer {
-    font-family: comic-sans MS;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     color: pink;
     text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
     text-align: center;
+    padding: 10px;
 }
 
-h1 {
+h1, h2 {
     color: pink;
     text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
 }
 
-
-
-
-form button {
-    font-family: comic-sans MS;
+/* === Register Form Styles === */
+.register {
+    background-color: black;
     color: pink;
-    text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
-    border: none;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* === Buttons === */
+form button, .btn {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: transparent;
+    border: 2px solid pink;
+    color: pink;
+    padding: 10px 20px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-shadow: 0 0 10px #e60073, 0 0 15px #e60073;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* 
-form button:hover {
+form button:hover, .btn:hover {
+    background-color: pink;
+    color: black;
+    transform: scale(1.05);
 }
 
-*/
+/* === Links === */
+a {
+    color: pink;
+    text-decoration: none;
+}
 
-
-/* links hover so it underlines */
 a:hover {
     text-decoration: underline;
 }
 
-
-/* theme implementation */
-
-
+/* === Theme Support === */
 body.light {
-    --bg-start: white; /* white bg */
-    --bg-end: rgb(101, 24, 201); /* purpley for animation */
-    --text-color: black; /* White text*/
+    --bg-start: white;
+    --bg-end: rgb(101, 24, 201);
+    --text-color: black;
 }
+
 body.dark {
-    --bg-start: black; /* black bg*/
-    --bg-end: blue; /* blue for animation */
-    --text-color: white; /* White text*/
+    --bg-start: black;
+    --bg-end: blue;
+    --text-color: white;
 }
+
 body.green {
-    --bg-start: #e8f5e9; /* Light green bg */
-    --bg-end: yellow; /* Yellow for animation */
-    --text-color: #1b5e20; /* Dark green text*/
+    --bg-start: #e8f5e9;
+    --bg-end: yellow;
+    --text-color: #1b5e20;
 }
 
-
-/* The animation to change the background when someone gets a match*/
-/* Keyframes for match animation */
+/* === Match Animation === */
 @keyframes match {
-    from {background-color: var(--bg-start);}
-    to {background-color: var(--bg-end);}
+    from { background-color: var(--bg-start); }
+    to { background-color: var(--bg-end); }
 }
 
-/* Notification Animation -need to implement elsewhereaswell */
 .match-visible {
     animation: match 1s ease-in-out infinite alternate;
 }
-
-
-/*
-.myclass=All the elements belonging to class myclass.
-*/
